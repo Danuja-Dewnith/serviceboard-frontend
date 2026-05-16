@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ServiceBoard — Frontend
 
-## Getting Started
+A Next.js 14 frontend for the ServiceBoard mini service request board, where homeowners can post service requests and tradespeople can browse, accept, and complete jobs.
 
-First, run the development server:
+Built as part of the Full-Stack Developer Intern assessment for GlobalTNA.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🌐 Live Demo
+
+| | URL |
+|---|---|
+| **Frontend (Vercel)** | [https://serviceboard-frontend.vercel.app](https://serviceboard-frontend.vercel.app) |
+| **Backend API** | [https://serviceboard-backend-production.up.railway.app/api](https://serviceboard-backend-production.up.railway.app/api) |
+
+---
+
+## ✨ Features
+
+### Core
+- Browse all job requests with category and status filters
+- Keyword search across title and description
+- Post new job requests with client-side validation
+- View full job detail page
+- Update job status (Open → In Progress → Closed)
+- Delete job requests
+
+### Bonus
+- JWT-based authentication (register / login)
+- Role-based views — Homeowner vs Service Provider
+- Interactive map for job locations (Leaflet + OpenStreetMap)
+- Sri Lanka timezone display (Asia/Colombo)
+- Provider dashboard to track accepted and completed jobs
+- Responsive design for mobile and desktop
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js 14 (App Router) | React framework |
+| React 18 | UI library |
+| CSS-in-JS (inline styles) | Styling |
+| Lucide React | Icons |
+| Axios | HTTP client |
+| Leaflet + React Leaflet | Interactive maps |
+
+---
+
+## 📁 Project Structure
+
+```
+frontend/
+├── app/
+│   ├── about/
+│   │   └── page.js
+│   ├── components/
+│   │   ├── FilterBar.js
+│   │   ├── Footer.js
+│   │   ├── JobCard.js
+│   │   ├── JobLocationMap.js
+│   │   ├── Navbar.js
+│   │   └── StatusBadge.js
+│   ├── job/[id]/
+│   │   └── page.js
+│   ├── login/
+│   │   └── page.js
+│   ├── my-requests/
+│   │   └── page.js
+│   ├── new/
+│   │   └── page.js
+│   ├── register/
+│   │   └── page.js
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js
+├── lib/
+│   ├── api.js
+│   └── dateUtils.js
+├── public/
+├── .env.local
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a `.env.local` file in the root of this directory:
 
-## Learn More
+```env
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
 
-To learn more about Next.js, take a look at the following resources:
+For production, set this to your deployed Railway backend URL.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Running Locally
 
-## Deploy on Vercel
+### Prerequisites
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js v18+
+- Backend server running at `http://localhost:5000` (see [backend repo](https://github.com/Danuja-Dewnith/serviceboard-backend))
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Danuja-Dewnith/serviceboard-frontend.git
+cd serviceboard-frontend
+
+# 2. Install dependencies
+npm install
+
+# 3. Add environment variables
+cp .env.local.example .env.local
+# Edit .env.local with your backend URL
+
+# 4. Start the development server
+npm run dev
+```
+
+App runs at `http://localhost:3000`
+
+---
+
+## 🏗️ Build for Production
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🚢 Deployment (Vercel)
+
+1. Push this repository to GitHub (must be **public**)
+2. Go to [vercel.com](https://vercel.com) → Add New Project
+3. Import this repository
+4. Add environment variable: `NEXT_PUBLIC_API_URL` → your Railway backend URL
+5. Click Deploy
+
+---
+
+## 🔗 Related
+
+- **Backend Repository:** [serviceboard-backend](https://github.com/Danuja-Dewnith/serviceboard-backend)
+
+---
+
+## 👨‍💻 Author
+
+**Danuja Dewnith**
+- Email: danujadewnith@gmail.com
+- GitHub: [@Danuja-Dewnith](https://github.com/Danuja-Dewnith)
+
+---
+
+## 📅 Submission
+
+- **Assessment:** Full-Stack Developer Intern — GlobalTNA
+- **Submission Date:** 18 May 2026
