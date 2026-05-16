@@ -345,7 +345,7 @@ export default function AboutPage() {
               </a>
               <a href="#" style={styles.linkButton}>
                 <Server size={18} />
-                Backend API (Render)
+                Backend API (Railway)
               </a>
               <a href="#" style={styles.linkButton}>
                 <GitBranch size={18} />
@@ -359,9 +359,9 @@ export default function AboutPage() {
             <h2 style={styles.sectionTitle}>👨‍💻 Developer</h2>
             <div style={styles.developerBox}>
               <div><strong>Name:</strong> Your Name</div>
-              <div><strong>Email:</strong> <a href="mailto:youremail@gmail.com" style={styles.emailLink}>youremail@gmail.com</a></div>
-              <div><strong>GitHub:</strong> <a href="#" style={styles.link}>github.com/yourusername</a></div>
-              <div><strong>LinkedIn:</strong> <a href="#" style={styles.link}>linkedin.com/in/yourprofile</a></div>
+              <div><strong>Email:</strong> <a href="mailto:danujadewnith@gmail.com" style={styles.emailLink}>danujadewnith@gmail.com</a></div>
+              <div><strong>GitHub:</strong> <a href="https://github.com/Danuja-Dewnith" style={styles.link} target="_blank" rel="noopener noreferrer">https://github.com/Danuja-Dewnith</a></div>
+              <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danuja-dewnith-munasingha-53439a371" style={styles.link} target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/danuja-dewnith-munasingha-53439a371</a></div>
             </div>
           </div>
 
