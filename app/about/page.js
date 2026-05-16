@@ -353,6 +353,7 @@ export default function AboutPage() {
               </a>
             </div>
           </div>
+        
 
           {/* Developer Info */}
           <div style={styles.section}>
@@ -360,8 +361,8 @@ export default function AboutPage() {
             <div style={styles.developerBox}>
               <div><strong>Name:</strong> Your Name</div>
               <div><strong>Email:</strong> <a href="mailto:danujadewnith@gmail.com" style={styles.emailLink}>danujadewnith@gmail.com</a></div>
-              <div><strong>GitHub:</strong> <a href="https://github.com/Danuja-Dewnith" style={styles.link} target="_blank" rel="noopener noreferrer">https://github.com/Danuja-Dewnith</a></div>
-              <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danuja-dewnith-munasingha-53439a371" style={styles.link} target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/danuja-dewnith-munasingha-53439a371</a></div>
+              <div><strong>GitHub:</strong> <a href="https://github.com/Danuja-Dewnith" style={styles.link} target="_blank" rel="noopener noreferrer">Danuja-Dewnith</a></div>
+              <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/danuja-dewnith-munasingha-53439a371" style={styles.link} target="_blank" rel="noopener noreferrer">Danuja Dewnith Munasingha</a></div>
             </div>
           </div>
 
